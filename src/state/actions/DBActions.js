@@ -1,7 +1,6 @@
 import * as jsonData from '../db/db.json'
 
 const executeLoadDB = data => {
-  console.log(data)
   return {
     type: 'LOAD_DB',
     payload: { category: 'general_info', displayName: 'General Info', count: data.length, data: data }

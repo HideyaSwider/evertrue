@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { EverTrueApp, store } from './client/App'
+import { EverTrueApp, store } from './components/Client/App'
 import { Provider } from 'react-redux'
-import registerServiceWorker from './client/registerServiceWorker'
+import registerServiceWorker from './components/Client/registerServiceWorker'
 
 ReactDOM.render(
   <Provider store={store}>

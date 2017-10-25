@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux'
-import { db } from './reducers'
+import { db, selected } from './reducers'
 
 export const EverTrueReducer = combineReducers({
-  db: db
+  db: db,
+  selected: selected
 })
 export * from './actions'
