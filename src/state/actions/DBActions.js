@@ -16,7 +16,7 @@ export const loadDB = () => {
             index: i,
             type: item.containing_object.data_type,
             everTrueFieldName: item.containing_object.name,
-            displayName: getDisplayName(item.containing_object.name),
+            displayName: getDisplayName(item.containing_object.name, item.containing_object.data_type),
             usage: item.containing_object.app_keys
           }
         } else {
@@ -24,7 +24,7 @@ export const loadDB = () => {
             index: i,
             type: item.data_type,
             everTrueFieldName: item.name,
-            displayName: getDisplayName(item.name),
+            displayName: getDisplayName(item.name, item.data_type),
             usage: item.app_keys
           }
         }
@@ -35,9 +35,11 @@ export const loadDB = () => {
   }
 }
 
-export const getDisplayName = str => {
+export const getDisplayName = (str, type = '') => {
   if (str.indexOf('dt_') > -1) {
     return str.replace('dt_', 'Date ')
+  } else if(type.toLowerCase() === 'boolean') {
+    return `Is ${str}?` 
   } else {
     if (str.indexOf('_') < 0) {
       return str.charAt(0).toUpperCase() + str.substring(1)
