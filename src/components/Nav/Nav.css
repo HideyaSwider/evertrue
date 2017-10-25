@@ -1,21 +1,21 @@
 .nav {
-	margin: 30px 0px 0px 30px;
-	display: inline-block;
-	background-color: #fff;
-	padding: 30px;
-	border-radius: 10px;
+  margin: 30px 0px 0px 30px;
+  display: inline-block;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
   min-height: 600px;
 }
 .nav-item {
   padding: 5px;
-  color: #A9BABB;
+  color: #a9babb;
   font-weight: 300;
   margin: 5px;
-  border-left: 2px solid #A9BABB;
+  border-left: 2px solid #a9babb;
   cursor: pointer;
 }
 .nav-item:hover {
-  background-color: #A9BABB;
+  background-color: #a9babb;
   color: #fff;
   font-weight: 300;
 }
@@ -24,7 +24,7 @@
   margin: 0;
 }
 .selected {
-  border-left: 2px solid #892D63;
-  color: #892D63;
+  border-left: 2px solid #a65d89;
+  color: #892d63;
   font-weight: 700;
 }

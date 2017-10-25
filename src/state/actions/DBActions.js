@@ -35,7 +35,7 @@ export const loadDB = () => {
   }
 }
 
-const getDisplayName = str => {
+export const getDisplayName = str => {
   if (str.indexOf('dt_') > -1) {
     return str.replace('dt_', 'Date ')
   } else {

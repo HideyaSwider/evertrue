@@ -18,18 +18,17 @@ class App extends Component {
   render() {
     return (
       <div>
-        {this.props.db.data === undefined
-          ?
+        {this.props.db.data === undefined ? (
           <img className="loading" src={loading} alt="loading" />
-          :
+        ) : (
           <div className="app">
-            <Nav onSelect={this.props.selectObject} data={this.props.db.data} selected={this.props.selected}/>
+            <Nav onSelect={this.props.selectObject} data={this.props.db.data} selected={this.props.selected} />
             <ObjectDetail data={this.props.db.data[this.props.selected]} />
           </div>
-        }
+        )}
       </div>
     )
   }
 }
 
-export const EverTrueApp = connect(state => ({db: state.db, ...state.selected}), { loadDB, selectObject })(App)
+export const EverTrueApp = connect(state => ({ db: state.db, ...state.selected }), { loadDB, selectObject })(App)
