@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 import { createStore, applyMiddleware } from 'redux'
 import { connect } from 'react-redux'
-import thunk from 'redux-thunk';
+import thunk from 'redux-thunk'
 import { loadDB, EverTrueReducer } from '../state'
 import loading from './loading.svg'
 
@@ -15,12 +15,10 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-       {this.props.db.props === undefined ? <img className="loading" src={loading} alt="loading" /> : <p>{JSON.stringify(this.props.db)}</p>}
+        {this.props.data === [] ? <img className="loading" src={loading} alt="loading" /> : <p>{JSON.stringify(this.props)}</p>}
       </div>
-    );
+    )
   }
 }
 
-export const EverTrueApp = connect(state => ({db: state.db}), {loadDB })(App)
-
-
+export const EverTrueApp = connect(state => state.db, { loadDB })(App)
