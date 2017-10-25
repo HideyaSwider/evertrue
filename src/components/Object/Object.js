@@ -1,7 +1,14 @@
 import React, { Component } from 'react'
+import './Object.css'
 
 export class ObjectDetail extends Component {
   render() {
-  	return <div style={{width: 200, height: 200, backgroundColor: 'blue'}}>{this.props.data.displayName}</div>
+    const { displayName, type, usage, everTrueFieldName } = this.props.data
+    return (
+      <div className="content">
+        <h1>{this.props.data.displayName}</h1>
+        <div className="info">{type} {everTrueFieldName}</div>
+      </div>
+    )
   }
 }

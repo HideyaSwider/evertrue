@@ -1,0 +1,30 @@
+.nav {
+	margin: 30px 0px 0px 30px;
+	display: inline-block;
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 10px;
+  min-height: 600px;
+}
+.nav-item {
+  padding: 5px;
+  color: #A9BABB;
+  font-weight: 300;
+  margin: 5px;
+  border-left: 2px solid #A9BABB;
+  cursor: pointer;
+}
+.nav-item:hover {
+  background-color: #A9BABB;
+  color: #fff;
+  font-weight: 300;
+}
+.nav-item p {
+  padding-left: 15px;
+  margin: 0;
+}
+.selected {
+  border-left: 2px solid #892D63;
+  color: #892D63;
+  font-weight: 700;
+}

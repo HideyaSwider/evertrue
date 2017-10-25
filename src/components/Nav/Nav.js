@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-const color  = () => {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
+import { NavItem } from './NavItem'
+import './Nav.css'
+
 export class Nav extends Component {
   render() {
-  	return <div onClick={() => this.props.onSelect(Math.round(Math.random() * 15) + 1)} style={{width: 200, height: 200, backgroundColor: color()}}>nav</div>
+    const { data, selected, onSelect } = this.props
+    return <div className="nav">
+      {data.map((item, i) => {
+        return <NavItem key={i} index={i} selected={i === selected} value={item.displayName} onSelect={onSelect}/>
+      })}
+    </div>
   }
 }

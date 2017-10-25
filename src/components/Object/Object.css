@@ -1,0 +1,11 @@
+.content {
+  min-width: 400px;
+  min-height: 600px;
+  background: #fff;
+  padding: 40px;
+  margin: 30px;
+  border-radius: 5px;
+  color: #597E88;
+  -ms-flex: 1 1;
+  flex: 1 1;
+}

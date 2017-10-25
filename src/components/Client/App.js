@@ -17,12 +17,12 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="app">
+      <div>
         {this.props.db.data === undefined
           ?
           <img className="loading" src={loading} alt="loading" />
           :
-          <div>
+          <div className="app">
             <Nav onSelect={this.props.selectObject} data={this.props.db.data} selected={this.props.selected}/>
             <ObjectDetail data={this.props.db.data[this.props.selected]} />
           </div>
